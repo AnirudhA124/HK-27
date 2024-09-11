@@ -3,7 +3,7 @@
 <head>
   <style>
     body {
-      width: 150px;
+      width: 300px;
       padding: 10px;
     }
     button {
@@ -14,11 +14,17 @@
       border: none;
       cursor: pointer;
     }
+    #textContainer {
+      margin-top: 10px;
+      white-space: pre-wrap; /* Preserve whitespace and line breaks */
+      word-wrap: break-word; /* Break long words to fit the container */
+    }
   </style>
 </head>
 <body>
   <h3>Select a Region</h3>
   <button id="captureBtn">Capture Screenshot</button>
+  <div id="textContainer">Extracted text will appear here...</div>
 
   <script src="popup.js"></script>
 </body>

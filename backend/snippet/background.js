@@ -23,14 +23,21 @@ function handleImage(imageUri, left, top, width, height) {
     );
 
     canvas.toBlob((blob) => {
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'screenshot.png';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      const formData = new FormData();
+      formData.append('image', blob, 'screenshot.png');
+
+      // Send the image to Flask API
+      fetch('http://localhost:5000/upload', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Text extracted from image:', data.text); // Log the extracted text in browser console
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
     });
   };
 }
