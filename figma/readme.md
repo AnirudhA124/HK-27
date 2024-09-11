@@ -1,1 +1,0 @@
-this folder contains all the figma files that have been used for the ui
