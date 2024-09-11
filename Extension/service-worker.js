@@ -71,8 +71,8 @@ function downloadTranscript() {
     if (result.userName && result.transcript && result.chatMessages) {
       // Create file name if values are provided, use default otherwise
       const fileName = result.meetingTitle && result.meetingStartTimeStamp
-        ? `TranscripTonic/Transcript-${result.meetingTitle} at ${result.meetingStartTimeStamp}.txt`
-        : `TranscripTonic/Transcript.txt`;
+        ? `Octavian/Transcript-${result.meetingTitle} at ${result.meetingStartTimeStamp}.txt`
+        : `Octavian/Transcript.txt`;
 
       // Create an array to store lines of the text file
       const lines = [];
@@ -104,7 +104,7 @@ function downloadTranscript() {
 
       // Add branding
       lines.push("---------------");
-      lines.push("Transcript saved using TranscripTonic Chrome extension (https://chromewebstore.google.com/detail/ciepnfnceimjehngolkijpnbappkkiag)");
+      lines.push("Transcript saved using Octavian Chrome extension (https://chromewebstore.google.com/detail/ciepnfnceimjehngolkijpnbappkkiag)");
       lines.push("---------------");
 
       // Join the lines into a single string, replace "You" with userName from storage
@@ -126,15 +126,15 @@ function downloadTranscript() {
           filename: fileName,
           conflictAction: "uniquify"
         }).then(() => {
-          console.log("Transcript downloaded to TranscripTonic directory");
+          console.log("Transcript downloaded to Octavian directory");
         }).catch((error) => {
           console.log(error);
           chrome.downloads.download({
             url: dataUrl,
-            filename: "TranscripTonic/Transcript.txt",
+            filename: "Octavian/Transcript.txt",
             conflictAction: "uniquify"
           });
-          console.log("Invalid file name. Transcript downloaded to TranscripTonic directory with simple file name.");
+          console.log("Invalid file name. Transcript downloaded to Octavian directory with simple file name.");
         });
       };
 

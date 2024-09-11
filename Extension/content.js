@@ -9,9 +9,9 @@ const timeFormat = {
   }
   const extensionStatusJSON_bug = {
     "status": 400,
-    "message": "<strong>TranscripTonic encountered a new error</strong> <br /> Please report it <a href='https://github.com/vivek-nexus/transcriptonic/issues' target='_blank'>here</a>."
+    "message": "<strong> Octavian encountered a new error</strong> <br /> Please report it <a href='https://github.com/AnirudhA124/Octavian/issues' target='_blank'>here</a>."
   }
-  const reportErrorMessage = "There is a bug in TranscripTonic. Please report it at https://github.com/vivek-nexus/transcriptonic/issues"
+  const reportErrorMessage = "There is a bug in Octavian. Please report it at https://github.com/AnirudhA124/Octavian/issues"
   const mutationConfig = { childList: true, attributes: true, subtree: true }
   
   // Name of the person attending the meeting
@@ -83,7 +83,7 @@ const timeFormat = {
   async function checkExtensionStatus() {
     // Set default value as 200
     chrome.storage.local.set({
-      extensionStatusJSON: { status: 200, message: "<strong>TranscripTonic is running</strong> <br /> Do not turn off captions" },
+      extensionStatusJSON: { status: 200, message: "<strong>Octavian is running</strong> <br /> Do not turn off captions" },
     });
   
     // https://stackoverflow.com/a/42518434
@@ -198,7 +198,7 @@ const timeFormat = {
         // Show confirmation message from extensionStatusJSON, once observation has started, based on operation mode
         chrome.storage.sync.get(["operationMode"], function (result) {
           if (result.operationMode == "manual")
-            showNotification({ status: 400, message: "<strong>TranscripTonic is not running</strong> <br /> Turn on captions using the CC icon, if needed" })
+            showNotification({ status: 400, message: "<strong>Octavian is not running</strong> <br /> Turn on captions using the CC icon, if needed" })
           else
             showNotification(extensionStatusJSON)
         })
@@ -350,7 +350,7 @@ const timeFormat = {
               transcriptTextBuffer = currentTranscriptText
               // Update buffers for next mutation
               beforeTranscriptText = currentTranscriptText
-              // If a person is speaking for a long time, Google Meet does not keep the entire text in the spans. Starting parts are automatically removed in an unpredictable way as the length increases and TranscripTonic will miss them. So we force remove a lengthy transcript node in a controlled way. Google Meet will add a fresh person node when we remove it and continue transcription. TranscripTonic picks it up as a new person and nothing is missed.
+              // If a person is speaking for a long time, Google Meet does not keep the entire text in the spans. Starting parts are automatically removed in an unpredictable way as the length increases and Octavian will miss them. So we force remove a lengthy transcript node in a controlled way. Google Meet will add a fresh person node when we remove it and continue transcription. Octavian picks it up as a new person and nothing is missed.
               if (currentTranscriptText.length > 250)
                 person.remove()
             }
