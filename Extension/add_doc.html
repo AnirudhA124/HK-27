@@ -11,23 +11,19 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      
     }
-    
-    
 
     html, body {
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background-color: #181c14;
+      background-color: #FFFFFF;
     }
 
     .title {
       width: 100%;
       height: 9%;
-      background-color: #181c14;
+      background-color: #FFFFFF;
       border-bottom: 2px solid #808080;
       display: flex;
       align-items: center;
@@ -39,26 +35,19 @@
       display: flex;
       align-items: center;
     }
-    .header{
-      color: white;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
 
     .logo {
-      height: 3em;
-      width: 4em;
-      background-image: url('./images/logo.png');
+      height: 75px;
+      width: 75px;
+      background-image: url('./images/icon.png');
       background-size: cover;
       background-position: right;
-      margin-right: 0.5rem;
-      margin-left: 0.5rem;
+      margin-right: -21px;
     }
 
     .name {
       font-size: 20px;
       font-weight: bold;
-      color: #F8F8F8;
     }
 
     .icons {
@@ -68,25 +57,27 @@
       color: black;
     }
 
-    .open {
+    .arrow, .dots, .open {
       width: 30px;
       height: 30px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
     }
-    
 
+    .arrow {
+      background-image: url('./images/arrow.png');
+    }
 
-
-  
+    .dots {
+      background-image: url('./images/options.png');
+      margin-left: 20px;
+    }
 
     .open {
       background-image: url('./images/open.png');
       margin-left: 20px;
-      cursor: pointer;
     }
-
 
     .options {
       display: flex;
@@ -105,7 +96,7 @@
       width: 80%;
       background-color: #F8F8F8;
       border-radius: 10px;
-      
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       color: black;
       font-size: 17px;
       font-weight: 500;
@@ -154,20 +145,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #3c3d37;
-      color: white;
+      background-color: #F8F8F8;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
       padding: 20px;
-      cursor: pointer;
-    }
-    .text-container:hover{
-      transform: scale(1.05);
-      background-color: #3c3d40;
-      color: white;
-      transition: transform 100ms ease-in-out, background-color 100ms ease-in-out ;
-      
     }
     
     .textbox {
@@ -222,7 +204,6 @@
       width: 24px;
       margin-right: 10px;
       cursor: pointer;
-      color: white;
     }
 
     .add_cont {
@@ -231,7 +212,6 @@
       display: flex;
       justify-content: center;
       align-content: center;
-      background-color: #181c14;
     }
 
     .add_doc {
@@ -239,8 +219,7 @@
       width: 89%;
       align-self: center;
       border-radius: 10px;
-      border: 2px solid whitesmoke;
-      background-color: #3c3d37;
+      border: 2px solid #000AFF;
       border-style: dashed;
       display: flex;
       justify-content: center;
@@ -261,18 +240,15 @@
 
     .subtxt {
       font-size: 22px;
-      color: white;
+      color: #000000;
       font-weight: lighter;
     }
 
     .txturl {
       margin-top: 44px;
-      color: white;
+      color: #000AFF;
       font-size: 22px;
       cursor: pointer;
-    }
-    .txt{
-      color: white;;
     }
 
     #fileInfo {
@@ -284,18 +260,11 @@
       justify-content: start;
       align-items: center;
       height: 11%;
-      
-      background-color: #181c14;
+      border-bottom: 2px solid black;
     }
     a {
-  text-decoration: none;  
+  text-decoration: none;  /* Removes underline */
   color: #000000;
-}
-  .add_doc:hover{
-    transform: scale(1.05);
-    background-color: #3c3d40;
-    transition: transform 100ms ease-in-out, background-color 100ms ease-in-out ;
-
 }
   </style>
 </head>
@@ -307,7 +276,8 @@
     </div>
     <div class="icons">
       <div class="open" aria-label="Open"></div>
-
+      <div class="dots" aria-label="Options"></div>
+      <div class="arrow" aria-label="Arrow"></div>
     </div>
   </div>
   <div class="options">
