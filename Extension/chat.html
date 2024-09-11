@@ -11,38 +11,46 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      color: white;
+      background-color: #181c14;
     }
+  .added_div{
+    background-color: transparent;
+  }
 
     html, body {
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background-color: #FFFFFF;
+      background-color:#181c14 ;
     }
 
     .title {
       width: 100%;
       height: 9%;
-      background-color: #FFFFFF;
-      border-bottom: 2px solid #808080;
+      background-color: #181c14;
+      
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 20px;
+     padding-left:0.5rem ;
+     padding-bottom: 0.5rem;
     }
 
     .heading {
       display: flex;
       align-items: center;
+      background-color: transparent;
     }
 
     .logo {
-      height: 75px;
-      width: 75px;
-      background-image: url('./images/icon.png');
+      height: 3em;
+      width: 4em;
+      background-image: url('./images/logo.png');
       background-size: cover;
       background-position: right;
-      margin-right: -21px;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
     }
 
     .name {
@@ -57,22 +65,16 @@
       color: black;
     }
 
-    .arrow, .dots, .open {
+    .open {
       width: 30px;
       height: 30px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      margin-right: 0.5em;
     }
 
-    .arrow {
-      background-image: url('./images/arrow.png');
-    }
-
-    .dots {
-      background-image: url('./images/options.png');
-      margin-left: 20px;
-    }
+  
 
     .open {
       background-image: url('./images/open.png');
@@ -86,6 +88,12 @@
       height: calc(90% - 100px);
       gap: 10px;
       padding-bottom: 10px;
+     
+    
+      margin: 6px;
+      border-radius: 6px;
+      margin-bottom: 0.2rem;
+      
     }
 
     .container1 {
@@ -94,10 +102,10 @@
       align-self: flex-start;
       margin-left: 20px;
       /* margin-top: 20px; */
-      background-color: #DBE2EF;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      color: #2E236C;
+
+      border-radius: 15px;
+
+      background-color: #31363F;
       font-size: 17px;
       font-weight: 500;
       display: flex;
@@ -107,15 +115,15 @@
       align-self: center;
     }
     .container2 {
+      background-color: #2c2c2e;
       margin: 10px;
      width: 81%;
       align-self: flex-start;
       margin-left: 20px;
       /* margin-top: 20px; */
-      background-color: #F8F8F8;
-      border-radius: 10px;
+      border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      color: black;
+      
       font-size: 17px;
       font-weight: 500;
       display: flex;
@@ -129,6 +137,9 @@
       display: flex;
       align-items: center;
       justify-content: start;
+    }
+    .error{
+      background-color: ;
     }
 
     .img2, .img3, .img4 {
@@ -162,6 +173,10 @@
     }
 
     .text-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
       position:sticky;
       bottom: 10px;
       margin-left: 50px;
@@ -173,23 +188,25 @@
       background-color: #F8F8F8;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      padding: 0 10px;
+     
+      margin-top: 20px;
     }
 
     .textbox {
+      color: black;
       width: 100%;
       height: 100%;
       border: none;
       background-color: transparent;
       font-size: 17px;
-      color: black;
+      
       padding: 17px;
       box-sizing: border-box;
       resize: none;
     }
 
     .textbox::placeholder {
-      color: #888;
+     color: black;
     }
 
     .icon {
@@ -214,6 +231,7 @@
     .send {
       background-image: url('./images/send.png');
       cursor: pointer;
+      background-color: transparent;
     }
 
 
@@ -299,15 +317,21 @@
         align-items: center;
     }
     .options {
-  height: 80vh;  /* Set this to the desired height */
-  overflow-y: auto;  /* Makes the container scrollable */
-  border: 1px solid #ccc;  /* Optional: for a visible boundary */
-  padding: 10px;  /* Optional: for spacing around messages */
-  margin-bottom: 10px;  /* Optional: space from other elements */
+  height: 80vh;  
+  overflow-y: auto;  
+  
+  padding: 10px;  
+  margin-bottom: 10px;  
 }
 
-/* Ensure the messages are styled appropriately */
-.container1, .container2 {
+
+.container1{
+  padding: 17px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+ .container2 {
   padding: 17px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -371,6 +395,6 @@
     <div class="icon send" id="sendButton" aria-label="Send"></div>
   </div>
   </div>
-  <script src="chat.js"></script>
+  <script src="chat.js" defer></script>
 </body>
 </html>
