@@ -102,10 +102,6 @@ function downloadTranscript() {
         lines.push("");
       }
 
-      // Add branding
-      lines.push("---------------");
-      lines.push("Transcript saved using Octavian Chrome extension (https://chromewebstore.google.com/detail/ciepnfnceimjehngolkijpnbappkkiag)");
-      lines.push("---------------");
 
       // Join the lines into a single string, replace "You" with userName from storage
       const textContent = lines.join("\n").replace(/You \(/g, result.userName + " (")
