@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ec57f9d5e.js" crossorigin="anonymous"></script>
+    <title>Minutes of Meeting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        #top {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 768px;
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .profile-img {
+            height: 56px;
+            width: 56px;
+            margin-right: 24px;
+            margin-bottom: 12px;
+            margin-top: 12px;
+            border-radius: 50%;
+        }
+
+        .title {
+            font-weight: 800;
+            margin-top: 24px;
+            cursor: pointer;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 100%;
+            margin-top: 28px;
+            list-style: none;
+        }
+
+        .icons i {
+            margin-left: 24px;
+            cursor: pointer;
+        }
+
+        #bottom {
+            margin-top: 16px;
+            width: 100%;
+            max-width: 768px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            border-radius: 12px;
+            background-color: white;
+        }
+
+        .heading {
+            color: black;
+            font-size: 2.25rem;
+            font-weight: 600;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 64px 0;
+        }
+
+        .small-img {
+            height: 48px;
+        }
+
+        .icon {
+            margin: 0 20px;
+        }
+
+        .subheading {
+            color: black;
+            font-size: 2.25rem;
+            margin-left: 24px;
+            font-weight: 600;
+        }
+
+        .buttons {
+            margin-top: 32px;
+            width: 100%;
+            max-width: 448px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid black;
+            border-radius: 12px;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            cursor: pointer;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="top" class="top">
+            <img class="profile-img" src="backgroud_main.jpeg">
+            <p class="title">OCTAVIAN.AI</p>
+            <ul class="icons">
+                <i class="fa-solid fa-maximize cursor-pointer"></i>
+                <i class="fa-solid fa-bars cursor-pointer"></i>
+                <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+            </ul>
+        </div>
+        <div id="bottom" class="bottom">
+            <div class="content">
+                <p class="heading">Minutes of Meeting</p>
+                <div class="image-row">
+                    <img src="pngwing.com.png" class="small-img">
+                    <i class="fa-solid fa-plus icon"></i>
+                    <img src="pngwing.com.png" class="small-img">
+                </div>
+                <p class="subheading">transcribing .....</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="button">Download meeting transcript</button>
+            <button class="button">Report a bug</button>
+            <button class="button">Get help</button>
+        </div>
+    </div>
+</body>
+
+</html>
