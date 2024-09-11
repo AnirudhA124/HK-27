@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Octavian - Chat with your documents">
+  <title>Octavian</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #FFFFFF;
+    }
+
+    .title {
+      width: 100%;
+      height: 9%;
+      background-color: #FFFFFF;
+      border-bottom: 2px solid #808080;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .heading {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 75px;
+      width: 75px;
+      background-image: url('./images/icon.png');
+      background-size: cover;
+      background-position: right;
+      margin-right: -21px;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      color: black;
+    }
+
+    .arrow, .dots, .open {
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .arrow {
+      background-image: url('./images/arrow.png');
+    }
+
+    .dots {
+      background-image: url('./images/options.png');
+      margin-left: 20px;
+    }
+
+    .open {
+      background-image: url('./images/open.png');
+      margin-left: 20px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: calc(100% - 100px);
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+
+    .container1 {
+      padding: 0;
+      margin-top: 20px;
+      height: 75%;
+      width: 80%;
+      background-color: #F8F8F8;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: black;
+      font-size: 17px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .opContent{
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+
+    .img2, .img3, .img4 {
+      background-size: cover;
+      background-position: center;
+      height: 25px;
+      width: 25px;
+      margin-right: 10px;
+    }
+
+    .img2 {
+      background-image: url('./images/MoM.png');
+    }
+
+    .img3 {
+      background-image: url('./images/pdfr.png');
+      height: 25px;
+      width: 19px;
+    }
+
+    .img4 {
+      background-image: url('./images/net.png');
+    }
+
+    .container {
+      margin: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .text-container {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #F8F8F8;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      padding: 20px;
+    }
+    
+    .textbox {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: transparent;
+      font-size: 17px;
+      color: black;
+      padding: 17px;
+      box-sizing: border-box;
+      resize: none;
+    }
+
+    .textbox::placeholder {
+      color: #888;
+    }
+
+    .icon {
+      height: 24px;
+      width: 28px;
+      margin: 0 5px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .pin {
+      background-image: url('./images/pin.png');
+      cursor: pointer;
+    }
+
+    .pic {
+      background-image: url('./images/pic.png');
+      cursor: pointer;
+    }
+
+    .send {
+      background-image: url('./images/send.png');
+      cursor: pointer;
+    }
+
+
+
+    .back {
+      margin-left: 10px;
+      background-image: url('./images/back.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .add_cont {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .add_doc {
+      height: 81%;
+      width: 89%;
+      align-self: center;
+      border-radius: 10px;
+      border: 2px solid #000AFF;
+      border-style: dashed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .pdfric {
+      background-image: url('./images/pdfr.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 50px;
+      width: 50px;
+    }
+
+    .subtxt {
+      font-size: 22px;
+      color: #000000;
+      font-weight: lighter;
+    }
+
+    .txturl {
+      margin-top: 44px;
+      color: #000AFF;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    #fileInfo {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .headt{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 11%;
+      border-bottom: 2px solid black;
+    }
+    a {
+  text-decoration: none;  /* Removes underline */
+  color: #000000;
+}
+  </style>
+</head>
+<body>
+  <div class="title">
+    <div class="heading">
+      <div class="logo"></div>
+      <div class="name">Octavian</div>
+    </div>
+    <div class="icons">
+      <div class="open" aria-label="Open"></div>
+      <div class="dots" aria-label="Options"></div>
+      <div class="arrow" aria-label="Arrow"></div>
+    </div>
+  </div>
+  <div class="options">
+    <div class="container1">
+      <div class="headt">
+        <a href="./main.html"><div class="back"></div></a>
+        <div class="header">
+          Summarize Video/Audio
+        </div>
+      </div>
+      <div class="add_cont">
+        <div class="add_doc">
+          <div class="pdfric"></div>
+          <div class="txt">Drag and drop your file here</div>
+          <div class="subtxt">mp4,mp3</div>
+          <input type="file" id="fileInput" accept=".mp4,.mp3" style="display: none;">
+          <div class="txturl" id="clickToUpload">Click here to Upload</div>
+          <div id="fileInfo"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-container disabled" id="redirectChat" style="pointer-events: none;">
+      Summarize
+    </div>    
+  </div>
+  <script src="./video_script.js"></script>
+</body>
+</html>

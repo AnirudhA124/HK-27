@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Octavian",
+  "version": "1.0",
+  "description": "Octavian is an advanced tool designed to transcribe and summarize video and audio files effortlessly. It provides concise summaries and answers questions related to the content, making it easier for users to quickly grasp key information. Whether you're sifting through lengthy recordings or seeking specific insights, Octavian streamlines the process, delivering clarity and efficiency at your fingertips.",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end",
+      "matches": [
+        "https://meet.google.com/*"
+      ],
+      "exclude_matches": [
+        "https://meet.google.com/"
+      ]
+    }
+  ],
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "downloads",
+    "tabs",
+    "management"
+  ],
+  "host_permissions": [
+    "https://meet.google.com/*"
+  ],
+  "externally_connectable": {
+    "ids": ["bkmhfgbiemlmokjfbbijkckanjhepina"]
+  }
+}
