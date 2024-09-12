@@ -422,7 +422,7 @@ const timeFormat = {
   }
   
   // Saves specified variables to chrome storage. Optionally, can send message to background script to download, post saving.
-  function overWriteChromeStorage(keys, sendDownloadMessage) {
+  function overWriteChromeStorage(keys, sendToServer) {
     const objectToSave = {}
     // Hard coded list of keys that are accepted
     if (keys.includes("userName"))
@@ -437,15 +437,31 @@ const timeFormat = {
       objectToSave.chatMessages = chatMessages
   
     chrome.storage.local.set(objectToSave, function () {
-      if (sendDownloadMessage) {
-        // Download only if any transcript is present, irrespective of chat messages
+      if (sendToServer) {
+        // Send data to Flask server only if any transcript is present
         if (transcript.length > 0) {
-          chrome.runtime.sendMessage({ type: "download" }, function (response) {
-            console.log(response);
-          })
+          sendTranscriptToFlask(objectToSave);
         }
       }
     })
+  }
+  
+  // New function to send transcript data to Flask server
+  function sendTranscriptToFlask(data) {
+    fetch('http://127.0.0.1:5000/receive_transcript', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log('Success:', result);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   }
   
   // Grabs updated meeting title, if available. Replaces special characters with underscore to avoid invalid file names.
