@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Octavian - Register Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="register.js" defer></script>
 </head>
-<body class=" text-white" style="background-color: #021526;">
+<body class="text-white" style="background-color: #021526;">
   <div class="min-h-screen flex items-center justify-center">
     <div class="flex w-11/12 lg:w-3/4 max-w-5xl">
       <!-- Left Section -->
-      <div class="w-1/2  p-10 rounded-l-lg" style="background: #070F2B; ">
+      <div class="w-1/2 p-10 rounded-l-lg" style="background: #070F2B;">
         <div class="flex items-center mb-10">
           <img src="../images/logo.png" alt="Octavian Logo" class="h-12 w-16 mr-3">
           <h1 class="text-3xl font-bold">Octavian</h1>
@@ -19,70 +20,69 @@
         <p class="mb-10">Join Octavian: The Ultimate Google Extension for Smart Docs, Media, and Meetings.</p>
         <!-- Feature Grid -->
         <div class="grid grid-cols-2 gap-6">
-            <!-- Document -->
-            <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
-              <div class="text-center">
-                <img src="../images/pdf.png" alt="Document" class="h-10 mx-auto mb-2">
-                <h3 class="text-lg font-semibold">Document</h3>
-                <p class="text-sm">Chat with your pdf, ppt, docs</p>
-              </div>
+          <!-- Document -->
+          <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
+            <div class="text-center">
+              <img src="../images/pdf.png" alt="Document" class="h-10 mx-auto mb-2">
+              <h3 class="text-lg font-semibold">Document</h3>
+              <p class="text-sm">Chat with your PDF, PPT, docs</p>
             </div>
-            <!-- URL -->
-            <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
-              <div class="text-center">
-                <img src="../images/url.png" alt="URL" class="h-10 mx-auto mb-2">
-                <h3 class="text-lg font-semibold">URL</h3>
-                <p class="text-sm">Ask any link anything!</p>
-              </div>
+          </div>
+          <!-- URL -->
+          <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
+            <div class="text-center">
+              <img src="../images/url.png" alt="URL" class="h-10 mx-auto mb-2">
+              <h3 class="text-lg font-semibold">URL</h3>
+              <p class="text-sm">Ask any link anything!</p>
             </div>
-            <!-- snip -->
-            <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
-              <div class="text-center">
-                  <img src="../images/snip.png" alt="Snip" class="h-10 mx-auto mb-2">
-                  <h3 class="text-lg font-semibold">Snip</h3>
-                  <p class="text-sm">Snip and ask away!</p>
-                </div>
-              
+          </div>
+          <!-- Snip -->
+          <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
+            <div class="text-center">
+              <img src="../images/snip.png" alt="Snip" class="h-10 mx-auto mb-2">
+              <h3 class="text-lg font-semibold">Snip</h3>
+              <p class="text-sm">Snip and ask away!</p>
             </div>
-            <!-- Video -->
-            <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
-              <div class="text-center">
-                <img src="../images/video_summarize.png" alt="Video" class="h-10 mx-auto mb-2">
-                <h3 class="text-lg font-semibold">Video</h3>
-                <p class="text-sm">Transcribe and Summarize your mp4 file</p>
-              </div>
+          </div>
+          <!-- Video -->
+          <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center hover:shadow-md hover:shadow-indigo-400 transition">
+            <div class="text-center">
+              <img src="../images/video_summarize.png" alt="Video" class="h-10 mx-auto mb-2">
+              <h3 class="text-lg font-semibold">Video</h3>
+              <p class="text-sm">Transcribe and Summarize your MP4 file</p>
             </div>
-            <!-- MoM -->
-            <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center col-span-2 hover:shadow-md hover:shadow-indigo-400 transition ">
-              <div class="text-center">
-                  <img src="../images/MoM.png" alt="MoM" class="h-10 mx-auto mb-2">
-                  <h3 class="text-lg font-semibold">MoM</h3>
-                  <p class="text-sm">Summarize your Meetings</p>
-                </div>
+          </div>
+          <!-- MoM -->
+          <div class="bg-gray-800 p-5 rounded-lg flex items-center justify-center col-span-2 hover:shadow-md hover:shadow-indigo-400 transition">
+            <div class="text-center">
+              <img src="../images/MoM.png" alt="MoM" class="h-10 mx-auto mb-2">
+              <h3 class="text-lg font-semibold">MoM</h3>
+              <p class="text-sm">Summarize your Meetings</p>
             </div>
           </div>
         </div>
+      </div>
       <!-- Right Section -->
-      
       <div class="w-1/2 p-10 rounded-r-lg mt-36" style="background-color: #021526;">
-        <h2 class="text-2xl font-semibold mb-6 flex justify-center">Create a new Account</h2>
+        <h2 class="text-2xl font-semibold mb-6 flex justify-center">Create a New Account</h2>
         <p class="mb-8 flex justify-center">Add your details to join</p>
         <!-- OAuth Buttons -->
         <div class="flex space-x-4 mb-8 justify-center">
-          <button class="bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-lg flex items-center space-x-2">
+          <button id="googleSignInBtn" class="bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-lg flex items-center space-x-2">
             <img src="../images/chrome1.png" alt="Google" class="h-6">
-            <span>Google</span>
+            <span>Sign up with Google</span>
           </button>
-         
         </div>
         <!-- Form Fields -->
-        <form>
-          <input type="email" placeholder="Email ID" class="w-full mb-4 p-3 bg-gray-900 text-white rounded-lg">
-          <input type="text" placeholder="Username" class="w-full mb-4 p-3 bg-gray-900 text-white rounded-lg">
-          <input type="password" placeholder="Password" class="w-full mb-6 p-3 bg-gray-900 text-white rounded-lg">
-          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded-lg text-white">Create Account</button>
+        <form id="registerForm">
+          <input type="email" id="email" placeholder="Email ID" class="w-full mb-4 p-3 bg-gray-900 text-white rounded-lg">
+          <input type="text" id="displayName" placeholder="Username" class="w-full mb-4 p-3 bg-gray-900 text-white rounded-lg">
+          <input type="password" id="password" placeholder="Password" class="w-full mb-6 p-3 bg-gray-900 text-white rounded-lg">
+          <button type="button" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded-lg text-white" id="registerBtn">
+            Create Account
+          </button>
         </form>
-        <p class="mt-6 text-center text-gray-400">Already a member? <a href="./login.html"  class="text-indigo-400">Login</a></p>
+        <p class="mt-6 text-center text-gray-400">Already a member? <a href="./login.html" class="text-indigo-400">Login</a></p>
       </div>
     </div>
   </div>
