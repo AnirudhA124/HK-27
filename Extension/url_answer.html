@@ -87,22 +87,45 @@
 
     .container1 {
       padding: 0;
-      margin-top: 30px;
-      margin-bottom: 80px;
+      margin-top: 0;
+      margin-bottom: 0;
       height: 10%;
       width: 80%;
-      background-color: #F8F8F8;
+      background-color: #181c14;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      color: black;
+      color: white;
       font-size: 17px;
       font-weight: 500;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      padding: 10px;
     }
+    
+    .textbox {
+      width: 80%; /* Set width to 80% */
+      height: 100%;
+      outline: none;
+      border: none;
+      background-color: #181c14;
+      font-size: 17px;
+      color: white;
+      padding: 10px;
+      
+      box-sizing: border-box;
+      resize: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+ 
+    .textbox::placeholder {
+      color: white;
+      
+    }
+    
 
     .opContent{
       display: flex;
@@ -134,6 +157,7 @@
 
     .container {
       margin: 10px;
+      background-color: #181c14;
       display: flex;
       flex-direction: row;
       justify-content: start;
@@ -146,7 +170,7 @@
   border: none;
   background-color: transparent;
   font-size: 17px;
-  color: black;
+  color: white;
   padding: 17px;
   box-sizing: border-box;
   resize: none; /* Prevents manual resizing */
@@ -169,11 +193,12 @@
       cursor: pointer;
     }
     
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
 
-    .textbox::placeholder {
-      color: #888;
-      
-    }
+  
 
     .icon {
       height: 24px;
@@ -273,13 +298,17 @@
   text-decoration: none;  /* Removes underline */
   color: #000000;
 }
-.urllogo{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 10rem;
-    width: 5rem;
-    background-image: url(./images/url.png);
+.urllogo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 10rem;
+  width: 10rem; /* Adjusted width to match the height */
+  background-image: url('./images/url.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
   </style>
 </head>
 <body>
