@@ -11,38 +11,50 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
     }
+  .added_div{
+    background-color: transparent;
+  }
+  .img1{
+    justify-content: center;
+    justify-items: center;
+  }
 
     html, body {
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background-color: #FFFFFF;
+      background-color:#181c14 ;
     }
 
     .title {
       width: 100%;
       height: 9%;
-      background-color: #FFFFFF;
-      border-bottom: 2px solid #808080;
+      background-color: #181c14;
+      
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 20px;
+     padding-left:0.5rem ;
+     padding-bottom: 0.5rem;
     }
 
     .heading {
       display: flex;
       align-items: center;
+      background-color: transparent;
     }
 
     .logo {
-      height: 75px;
-      width: 75px;
-      background-image: url('./images/icon.png');
+      height: 3em;
+      width: 4em;
+      background-image: url('./images/logo.png');
       background-size: cover;
       background-position: right;
-      margin-right: -21px;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
     }
 
     .name {
@@ -57,22 +69,16 @@
       color: black;
     }
 
-    .arrow, .dots, .open {
+    .open {
       width: 30px;
       height: 30px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      margin-right: 0.5em;
     }
 
-    .arrow {
-      background-image: url('./images/arrow.png');
-    }
-
-    .dots {
-      background-image: url('./images/options.png');
-      margin-left: 20px;
-    }
+  
 
     .open {
       background-image: url('./images/open.png');
@@ -85,45 +91,51 @@
       align-items: center;
       height: calc(90% - 100px);
       gap: 10px;
-      width: 100vw;
       padding-bottom: 10px;
+     
+    
+      margin: 6px;
+      border-radius: 6px;
+      margin-bottom: 0.2rem;
+      
     }
 
     .container1 {
       margin: 10px;
-     width: 81%;
-      align-self: flex-start;
+      padding: 10px;
+      align-self: flex-end;
       margin-left: 20px;
       /* margin-top: 20px; */
-      background-color: #DBE2EF;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      color: #2E236C;
+
+      border-radius: 15px;
+
+      background-color: #31363F;
       font-size: 17px;
       font-weight: 500;
       display: flex;
       flex-direction: row;
-      justify-content: start;
-      align-items: center;
-      align-self: center;
+      justify-content: end;
+      align-items: end;
+      align-self: flex-end;
     }
     .container2 {
+      background-color: #2c2c2e;
       margin: 10px;
-     width: 81%;
+      padding: 10px;
+
       align-self: flex-start;
       margin-left: 20px;
       /* margin-top: 20px; */
-      background-color: #F8F8F8;
-      border-radius: 10px;
+      border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      color: black;
+      
       font-size: 17px;
       font-weight: 500;
       display: flex;
       flex-direction: row;
       justify-content: start;
-      align-items: center;
-      align-self: center;
+      align-items: start;
+      align-self: flex-start;
     }
 
     .opContent{
@@ -163,6 +175,11 @@
     }
 
     .text-container {
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
       position:sticky;
       bottom: 10px;
       margin-left: 50px;
@@ -172,25 +189,36 @@
       height: 9%;
       width: 80%;
       background-color: #F8F8F8;
+      border: none;
+      outline: none;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      padding: 0 10px;
+     
+      margin-top: 20px;
+      align-self: center;
     }
 
     .textbox {
-      width: 100%;
       height: 100%;
+      color: black;
+      width: 100%;
+      display: flex;
       border: none;
       background-color: transparent;
       font-size: 17px;
-      color: black;
+      border: none;
+      outline: none;
       padding: 17px;
       box-sizing: border-box;
       resize: none;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+
     }
 
     .textbox::placeholder {
-      color: #888;
+     color: black;
     }
 
     .icon {
@@ -215,6 +243,7 @@
     .send {
       background-image: url('./images/send.png');
       cursor: pointer;
+      background-color: transparent;
     }
 
 
@@ -298,59 +327,32 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-    /* Container for chat messages */
     }
-.options {
-  height: 80vh; /* Set height to allow space for text input */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 10px; /* Space around messages */
-  background-color: #f9f9f9; /* Slightly different background color for visibility */
-  border-bottom: 2px solid #ccc; /* Optional: Border at the bottom */
-  margin-bottom: 10px; /* Space from text input */
-    /* Hide scrollbar */
-    scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-}
-
-.options::-webkit-scrollbar {
-  width: 0px; /* Chrome, Safari, Opera */
-  background: transparent; /* Optional: only if you want to hide the scrollbar's background */
+    .options {
+  height: 80vh;  
+  overflow-y: auto;  
+  
+  padding: 10px;  
+  margin-bottom: 10px;  
 }
 
 
-/* Common styles for both user and bot messages */
-.container1, .container2 {
-  margin: 10px;
-  width: 81%;
-  background-color: #DBE2EF;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 17px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
+.container1{
+  padding: 17px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
 }
-
-/* Additional styling for user messages */
-.container1 {
-  background-color: #DBE2EF; /* Color for user messages */
-  color: #2E236C; /* Text color */
-}
-
-/* Additional styling for bot messages */
-.container2 {
-  background-color: #F8F8F8; /* Color for bot messages */
-  color: black; /* Text color */
-}
-/* Ensure the messages are styled appropriately */
-.container1, .container2 {
+ .container2 {
   padding: 17px;
   margin-bottom: 10px;
   border-radius: 5px;
   font-size: 1.1em;
 }
 
-
+.user_img{
+  height: 30px;
+}
 
 .logou, .logoc {
   width: 30px;  /* Set appropriate size for logos */
@@ -369,7 +371,7 @@
 }
 
     .logoc{
-        background-image: url(./images/icon.png);
+        background-image: url(./images/logo.png);
         background-size: cover;        
         height: 50px;
         width: 50px;
@@ -407,6 +409,6 @@
     <div class="icon send" id="sendButton" aria-label="Send"></div>
   </div>
   </div>
-  <script src="./url_chat.js"></script>
+  <script src="chat_url.js" defer></script>
 </body>
 </html>
