@@ -94,7 +94,7 @@ def process_url():
 def chat_route():
     global url_store
     data = request.get_json()
-    question = data.get('question')
+    question = data.get('message', '')
     print(f"Received question: {question}")  # Debug output
     if question and url_store:
         # Fetch the content from the stored URL
@@ -104,7 +104,7 @@ def chat_route():
             retriever = save_and_process_document(temp_file_path)
             response = chat(question, retriever)
             print(f"Returning response: {response}")  # Debug output
-            return jsonify({'answer': response})
+            return jsonify({'response': response})
     return jsonify({'error': 'No question provided or URL missing'}), 400
 
 if __name__ == '__main__':
