@@ -11,20 +11,22 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      background-color: #31363F;
+      color: white;
     }
 
     html, body {
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background-color: #FFFFFF;
+      background-color: #31363F;
     }
 
     .title {
       width: 100%;
       height: 9%;
-      background-color: #FFFFFF;
-      border-bottom: 2px solid #808080;
+      background-color: #31363F;
+      
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -37,12 +39,12 @@
     }
 
     .logo {
-      height: 75px;
-      width: 75px;
-      background-image: url('./images/icon.png');
+      height: 55px;
+      width: 65px;
+      background-image: url('./images/logo.png');
       background-size: cover;
       background-position: right;
-      margin-right: -21px;
+      margin-right: 8px;
     }
 
     .name {
@@ -57,7 +59,7 @@
       color: black;
     }
 
-    .arrow, .dots, .open {
+    .open {
       width: 30px;
       height: 30px;
       background-size: contain;
@@ -65,18 +67,12 @@
       background-position: center;
     }
 
-    .arrow {
-      background-image: url('./images/arrow.png');
-    }
-
-    .dots {
-      background-image: url('./images/options.png');
-      margin-left: 20px;
-    }
+ 
 
     .open {
       background-image: url('./images/open.png');
       margin-left: 20px;
+      cursor: pointer;
     }
 
     .options {
@@ -149,11 +145,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #F8F8F8;
+      background-color: #31362f;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
       padding: 20px;
+      color: white;
+      cursor: pointer;
     }
     
     .textbox {
@@ -166,10 +163,14 @@
       padding: 17px;
       box-sizing: border-box;
       resize: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .textbox::placeholder {
       color: #888;
+      
     }
 
     .icon {
@@ -273,8 +274,8 @@
 .urllogo{
     margin-top: 50px;
     margin-bottom: 50px;
-    height: 157px;
-    width: 182px;
+    height: 10rem;
+    width: 5rem;
     background-image: url(./images/url.png);
 }
   </style>
@@ -296,9 +297,9 @@
     <div class="container1">
         <textarea name="textbox" class="textbox" id="textbox" placeholder="Add URL"></textarea>
     </div>
-    <div class="text-container" id="redirectChatURL">
+    <button class="text-container" id="redirectChatURL">
       Click to chat
-    </div>
+    </button>
   </div>
   <script src="./url_scripts.js"></script>
 </body>
