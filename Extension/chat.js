@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chatContainer.scrollTop = chatContainer.scrollHeight;
   
         // Send message to server
-        fetch('https://pdf-api-ier4.onrender.com/chat', {  // URL of your Flask backend
+        fetch('http://127.0.0.1:5000/chat', {  // URL of your Flask backend
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
