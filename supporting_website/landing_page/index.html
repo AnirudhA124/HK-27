@@ -6,92 +6,88 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="logic.js" defer></script>
     <title>Octavian</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
 </head>
-<body class=" bg-fixed   bg-center" style="background-image: url('backgroud_main.jpeg');">
-<header class="flex fixed  w-full  ">
+<body class="bg-fixed bg-center" style="background-image: url('backgroud_main.jpeg');">
+<header class="flex fixed w-full">
     <div class="flex justify-start pl-36 mt-7 text-white">
-        <nav class="font-extrabold text-6xl pr-36 mt-3 active:text-blue-800" id="landing-link" ><a href="#landing">Octavian</a></nav>  
-        <ul class="content-center items-center space-x-7 text-xl px-4 pr-7 font-semibold flex ">
-            <li class="cursor-pointer scroll active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="aboutus-link"><a href="#aboutus" style="scroll-behavior: smooth; " >About us</a></li>
-            <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="features-link"><a style="scroll-behavior: smooth;" href="#features">Features</a></li>
-            <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="pricing-link"><a href="#pricing" style="scroll-behavior: smooth;">Pricing</a></li>
-            <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200"><a style="scroll-behavior: smooth;">Chat with Octavian</a></li>
+        <nav class="font-extrabold text-6xl pr-36 mt-3 active:text-blue-800" id="landing-link"><a href="#landing">Octavian</a></nav>  
+        <ul class="content-center items-center space-x-7 text-xl px-4 pr-7 font-semibold flex">
+            <li class="cursor-pointer scroll active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="aboutus-link"><a href="#aboutus">About us</a></li>
+            <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="features-link"><a href="#features">Features</a></li>
+            <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="pricing-link"><a href="#pricing">Pricing</a></li>
+            <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200"><a>Chat with Octavian</a></li>
         </ul>
-      
-
     </div>
     <div class="flex items-center justify-end h-32">
-        <button class="bg-blue-900 mt-6  w-52 h-10 ml-12 font-semibold text-white rounded-2xl transition-all">
-            <span class="text-lg text-white  pl-2"><i class="fab fa-chrome "></i></span>  Add to Chrome 
+        <button class="bg-blue-900 mt-6 w-52 h-10 ml-12 font-semibold text-white rounded-2xl transition-all">
+            <span class="text-lg text-white pl-2"><i class="fab fa-chrome"></i></span> Add to Chrome
         </button>
     </div>
 </header>
-<main id="landing" class="text-white min-h-screen w-full pt-32 transition duration-300 ease-in-out ">
+<main id="landing" class="text-white min-h-screen w-full pt-32 transition duration-300 ease-in-out">
     <div class="text-center pt-36">
         <p class="text-7xl">Your AI study partner,</p>
         <p class="text-7xl">for a smarter tomorrow</p>
         <p class="pt-14 text-4xl">Create, Summarize and Transcribe.</p>
-        <div class="flex items-center justify-center h-32 ">
-            <button class="bg-white w-52 h-16 font-semibold text-black py-1 rounded-2xl hover:bg-blue-950 hover:text-white transition-all  duration-300 delay-75  ">
+        <div class="flex items-center justify-center h-32">
+            <button onclick="window.location.href='#'" class="bg-white w-52 h-16 font-semibold text-black py-1 rounded-2xl hover:bg-blue-950 hover:text-white transition-all duration-300 delay-75">
                 Get Started for Free
             </button>
         </div>
     </div>
 </main>
-<div id="aboutus"  class="text-white pt-60 flex-col px-20 s min-h-screen w-full transition duration-300 ease-in-out ">
-    <p class="pb-10  text-5xl font-extrabold">About Us</p>
-    <p class=" pt-8 max-h-10 text-3xl" style="line-height: 40px;">
-    We are a dynamic team of third-year students from Manipal Institute of Technology (MIT), Manipal.  As aspiring engineers and innovators, we're passionate about leveraging technology 
-    to solve real-world problems.
-    As digital natives and future engineers, we've experienced 
-    firsthand the challenges of information overload and inefficient communication. 
-    This inspired us to create a solution that could revolutionize how meetings are 
-    conducted and documented.
+<div id="aboutus" class="text-white pt-60 flex-col px-20 min-h-screen w-full transition duration-300 ease-in-out">
+    <p class="pb-10 text-5xl font-extrabold">About Us</p>
+    <p class="pt-8 max-h-10 text-3xl" style="line-height: 40px;">
+        We are a dynamic team of third-year students from Manipal Institute of Technology (MIT), Manipal. As aspiring engineers and innovators, we're passionate about leveraging technology 
+        to solve real-world problems. As digital natives and future engineers, we've experienced 
+        firsthand the challenges of information overload and inefficient communication. 
+        This inspired us to create a solution that could revolutionize how meetings are 
+        conducted and documented.
     </p>
-    </div>
-    <div id="features" class="bg-transparent min-h-screen">
-        <div class="m-20 pt-22 pb-10 font-extrabold text-5xl flex justify-center items-center text-white">
-            <p></p>
-        </div> 
-        <div class="flex flex-row justify-between mt-28"> <!-- Ensuring 2/3 height for the main container -->
-            <div class="flex justify-start items-start text-white min-w-fit">
-                <div class=" ml-40 text-start space-y-4 font-semibold text-xl   ">
-                   
-                    <div id="pdf" class=" pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8  cursor-pointer transition-all"> Chat with your pdf, ppt, docs</div>
-                    <div id="url" class=" pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8  cursor-pointer transition-all">Ask any link anything</div>
-                    <div id="mom" class="  pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8 cursor-pointer transition-all">Summarize your meetings</div>
-                    <div id="video" class="pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8  cursor-pointer transition-all">Transcribe your mp4 file</div>
-                </div>
-            </div>
-            <div id="img1" class="flex  justify-end items-center mr-40 mt-16 h-full"> <!-- Centering the image vertically -->
-                <img class="w-1/3 h-full object-cover" id="img" src="pngwing.com.png"> <!-- Image takes 1/3 width and full height -->
+</div>
+<div id="features" class="bg-transparent min-h-screen">
+    <div class="m-20 pt-22 pb-10 font-extrabold text-5xl flex justify-center items-center text-white"></div> 
+    <div class="flex flex-row justify-between mt-28">
+        <div class="flex justify-start items-start text-white min-w-fit">
+            <div class="ml-40 text-start space-y-4 font-semibold text-xl">
+                <div id="pdf" class="pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8 cursor-pointer transition-all">Chat with your pdf, ppt, docs</div>
+                <div id="url" class="pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8 cursor-pointer transition-all">Ask any link anything</div>
+                <div id="mom" class="pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8 cursor-pointer transition-all">Summarize your meetings</div>
+                <div id="video" class="pt-10 p-6 px-20 rounded-md hover:shadow-lg hover:shadow-white hover:p-8 cursor-pointer transition-all">Transcribe your mp4 file</div>
             </div>
         </div>
-     </div>
-   <div id="pricing" class="text-white  flex-col px-20 pt-40 w-full transition duration-300 ease-in-out justify-center items-center min-h-screen  ">
-    <div  class="flex justify-center ">
-        <div class="h-12 flex justify-center space-x-8 rounded-lg text-white  "  style="background-color: #1A4870;">
-            <button class="bg-blue-950 font-semibold px-4  my-2 ml-2 rounded-md hover:bg-white hover:text-blue-900 transition-all " id="monthly"> Monthly</button>
-            <button class=" px-4 my-2  font-semibold  items-center  transition-all" id="annual"> Annual </button>
-
-            
-        </div>
-        
-    </div>
-        <div class="flex py-10 space-x-20 justify-center h-96 text-white ">
-            <div class="font-extrabold text-xl  w-72 bg-blue-950 rounded-lg p-4"><h1 class="ml-8 mt-4">Free <br><br> $0</h1>
-                 <button class="justify-center z w-full mt-6 bg-white rounded-lg text-blue-900  hover:bg-blue-900 hover:text-white transition-all duration-300 delay-75">Continue for Free</button></div>
-            <div class="font-extrabold text-xl w-72 bg-blue-950 rounded-lg p-4"><h1 class="ml-8 mt-4">Mini <br> <br>$5</h1>
-                <button class="justify-center  w-full mt-6 bg-white rounded-lg text-blue-900  hover:bg-blue-900 hover:text-white transition-all duration-300 delay-75">Continue with Mini</button></div>
-            <div class="font-extrabold text-xl w-72 bg-blue-950 rounded-lg p-4"><h1 class="ml-8 mt-4">Pro <br> <br>$12</h1>
-                <button class="justify-center rounded-lg  w-full mt-6 bg-white text-blue-900 hover:bg-blue-900 hover:text-white transition-all duration-300 delay-75">Continue with Pro</button></div>
+        <div id="img1" class="flex justify-end items-center mr-40 mt-16 h-full">
+            <img class="w-1/3 h-full object-cover" id="img" src="pngwing.com.png">
         </div>
     </div>
-
-        
-
-
-
+</div>
+<div id="pricing" class="text-white flex-col px-20 pt-40 w-full transition duration-300 ease-in-out justify-center items-center min-h-screen">
+    <div class="flex justify-center">
+        <div class="h-12 flex justify-center space-x-8 rounded-lg text-white" style="background-color: #1A4870;">
+            <button class="bg-blue-950 font-semibold px-4 my-2 ml-2 rounded-md hover:bg-white hover:text-blue-900 transition-all" id="monthly">Monthly</button>
+            <button class="px-4 my-2 font-semibold items-center transition-all" id="annual">Annual</button>
+        </div>
+    </div>
+    <div class="flex py-10 space-x-20 justify-center h-96 text-white">
+        <div class="font-extrabold text-xl w-72 bg-blue-950 rounded-lg p-4">
+            <h1 class="ml-8 mt-4">Free <br><br> $0</h1>
+            <button class="justify-center z w-full mt-6 bg-white rounded-lg text-blue-900 hover:bg-blue-900 hover:text-white transition-all duration-300 delay-75">Continue for Free</button>
+        </div>
+        <div class="font-extrabold text-xl w-72 bg-blue-950 rounded-lg p-4">
+            <h1 class="ml-8 mt-4">Mini <br> <br>$5</h1>
+            <button class="justify-center w-full mt-6 bg-white rounded-lg text-blue-900 hover:bg-blue-900 hover:text-white transition-all duration-300 delay-75">Continue with Mini</button>
+        </div>
+        <div class="font-extrabold text-xl w-72 bg-blue-950 rounded-lg p-4">
+            <h1 class="ml-8 mt-4">Pro <br> <br>$12</h1>
+            <button class="justify-center rounded-lg w-full mt-6 bg-white text-blue-900 hover:bg-blue-900 hover:text-white transition-all duration-300 delay-75">Continue with Pro</button>
+        </div>
+    </div>
+</div>
 </body>
-
 </html>
