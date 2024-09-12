@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const userQuestionDiv = document.createElement('div');
         userQuestionDiv.classList.add('container1');
         userQuestionDiv.innerHTML = `
-          <div class="added_div">You: ${userMessage}</div>`;
+        <div></div> <div class="added_div">You: ${userMessage}</div>`;
         chatContainer.appendChild(userQuestionDiv);
         textbox.value = '';
   
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const botResponseDiv = document.createElement('div');
           botResponseDiv.classList.add('container2');
           botResponseDiv.innerHTML = `
-            <div classes ="added_div">Bot: ${data.response}</div>`;
+          <div class="img1"> <img class="user_img" src="./images/logo.png" alt="logo"></div><div class ="added_div"> ${data.response}</div>`;
           chatContainer.appendChild(botResponseDiv);
   
           // Scroll to the bottom of the chat container
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const errorDiv = document.createElement('div');
           errorDiv.classList.add('container2');
           errorDiv.innerHTML = `
-            <div class="added_div">Bot: Sorry, there was an error processing your request.</div>`;
+          <div class="img1"> <img class="user_img" src="./images/logo.png" alt="logo"></div> <div class="added_div"> Sorry, there was an error processing your request.</div>`;
           chatContainer.appendChild(errorDiv);
         });
       } else {
