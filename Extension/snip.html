@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Octavian - Snip</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #181c14;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1rem;
+    }
+
+    .logo {
+      height: 55px;
+      width: 75px;
+      background-image: url('./images/logo.png'); /* Your Octavian logo */
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+
+    .back-arrow {
+      height: 25px;
+      width: 25px;
+      background-image: url('./images/back.png'); /* Your back arrow image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .snip-icon {
+      width: 150px;
+      height: 150px;
+      background-image: url('./images/snip.png'); /* Your snip icon image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-bottom: 40px;
+      
+      
+    }
+
+    .chat-button {
+      background-color: #4a4a48;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .chat-button:hover {
+      background-color: #646464;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+   <a href="main.html"> <div class="back-arrow"></div></a> 
+    <div class="logo"></div>
+    <div class="title">Octavian</div>
+  </div>
+
+  <div class="main">
+   
+    <div class="snip-icon"></div>
+    
+    <button class="chat-button">Click to Chat</button>
+  </div>
+</body>
+</html>
