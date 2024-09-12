@@ -12,6 +12,7 @@
       margin: 0;
       padding: 0;
       color: white;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     html, body {
@@ -39,12 +40,12 @@
     }
 
     .logo {
-      height: 75px;
+      height: 65px;
       width: 75px;
-      background-image: url('./images/icon.png');
+      background-image: url('./images/logo.png');
       background-size: cover;
       background-position: right;
-      margin-right: -21px;
+      margin-left: 20px ;
     }
 
     .name {
@@ -143,7 +144,8 @@
     }
 
     .text-container {
-      margin-top: 20px;
+      
+      margin: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -154,6 +156,7 @@
       position: relative;
       padding: 20px;
       cursor: pointer;
+      
     }
     .text-container:hover{
       transform: scale(1.05);
@@ -276,6 +279,10 @@
       transition: transform 100ms ease-in-out, background-color 100ms ease-in-out ;
       
     }
+    .buttons{
+      display: flex;
+    
+    }
 
     #fileInfo {
       margin-top: 10px;
@@ -325,9 +332,12 @@
         </div>
       </div>
     </div>
-    <button class="text-container disabled" id="redirectChat" >
-      Summarize
-    </button>    
+   <div class="buttons" > <button class="text-container disabled" id="redirectChat" >
+    Transcribe
+  </button>  <button class="text-container disabled" id="redirectChat" >
+    Summarize
+  </button> </div>
+      
   </div>
   <script src="./video_script.js"></script>
 </body>
