@@ -11,20 +11,22 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      color: white;
     }
 
     html, body {
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background-color: #FFFFFF;
+      background-color: #181c14;
+
     }
 
     .title {
       width: 100%;
       height: 9%;
-      background-color: #FFFFFF;
-      border-bottom: 2px solid #808080;
+      background-color: #181c14;
+      
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -145,11 +147,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #F8F8F8;
+      background-color: #3c3d37;
+      color: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
       padding: 20px;
+      cursor: pointer;
+    }
+    .text-container:hover{
+      transform: scale(1.05);
+      background-color: #3c3d40;
+      color: white;
+      transition: transform 100ms ease-in-out, background-color 100ms ease-in-out ;
+      
     }
     
     .textbox {
@@ -212,6 +223,7 @@
       display: flex;
       justify-content: center;
       align-content: center;
+     background-color: #181c14;
     }
 
     .add_doc {
@@ -219,7 +231,7 @@
       width: 89%;
       align-self: center;
       border-radius: 10px;
-      border: 2px solid #000AFF;
+      border: 2px solid white;;
       border-style: dashed;
       display: flex;
       justify-content: center;
@@ -227,7 +239,14 @@
       flex-direction: column;
       font-size: 22px;
       text-align: center;
+      background-color: #3c3d3c;
     }
+    .add_doc:hover{
+      transform: scale(1.05);
+      background-color: #3c3d40;
+      transition: transform 100ms ease-in-out, background-color 100ms ease-in-out ;
+  
+  }
 
     .pdfric {
       background-image: url('./images/pdfr.png');
@@ -240,15 +259,22 @@
 
     .subtxt {
       font-size: 22px;
-      color: #000000;
+      color: white;
       font-weight: lighter;
     }
 
     .txturl {
       margin-top: 44px;
-      color: #000AFF;
+      color: white;
       font-size: 22px;
       cursor: pointer;
+    }
+    .txturl:hover{
+      
+      
+      color: #00ffff;
+      transition: transform 100ms ease-in-out, background-color 100ms ease-in-out ;
+      
     }
 
     #fileInfo {
@@ -260,7 +286,8 @@
       justify-content: start;
       align-items: center;
       height: 11%;
-      border-bottom: 2px solid black;
+      
+      background-color: #181c14;
     }
     a {
   text-decoration: none;  /* Removes underline */
@@ -276,8 +303,7 @@
     </div>
     <div class="icons">
       <div class="open" aria-label="Open"></div>
-      <div class="dots" aria-label="Options"></div>
-      <div class="arrow" aria-label="Arrow"></div>
+   
     </div>
   </div>
   <div class="options">
@@ -299,9 +325,9 @@
         </div>
       </div>
     </div>
-    <div class="text-container disabled" id="redirectChat" style="pointer-events: none;">
+    <button class="text-container disabled" id="redirectChat" >
       Summarize
-    </div>    
+    </button>    
   </div>
   <script src="./video_script.js"></script>
 </body>
