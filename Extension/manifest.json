@@ -31,8 +31,7 @@
     "storage",
     "downloads",
     "tabs",
-    "management",
-    "http://localhost:5000/"
+    "management"
   ],
   "host_permissions": [
     "https://meet.google.com/*"
