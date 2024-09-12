@@ -1,53 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sendButton = document.getElementById('sendButton');
-    const textbox = document.getElementById('textbox');
-    const chatContainer = document.querySelector('.options');
+document.addEventListener('DOMContentLoaded', function() {
+  const sendButton = document.getElementById('sendButton');
+  const textbox = document.getElementById('textbox');
+  const chatContainer = document.querySelector('.options');
 
-    function addMessage(content, isUser) {
-        const messageContainer = document.createElement('div');
-        messageContainer.classList.add(isUser ? 'userchat' : 'botchat');
+  function sendMessage() {
+    const userMessage = textbox.value.trim();
 
-        const messageText = document.createElement('div');
-        messageText.classList.add(isUser ? 'container1' : 'container2');
-        messageText.innerHTML = `${isUser ? 'You' : 'Bot'}: ${content}`;
+    if (userMessage) {
+      // Create a new container for the user question
+      const userQuestionDiv = document.createElement('div');
+      userQuestionDiv.classList.add('container1');
+      userQuestionDiv.innerHTML = `
+      <div></div> <div class="added_div">You: ${userMessage}</div>`;
+      chatContainer.appendChild(userQuestionDiv);
+      textbox.value = '';
 
-        messageContainer.appendChild(messageText);
-        chatContainer.appendChild(messageContainer);
+      // Scroll to the bottom of the chat container
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      // Send message to server
+      fetch('http://127.0.0.1:5000/chat', {  // URL of your Flask backend
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: userMessage }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Create a new container for the bot response
+        const botResponseDiv = document.createElement('div');
+        botResponseDiv.classList.add('container2');
+        botResponseDiv.innerHTML = `
+        <div class="img1"> <img class="user_img" src="./images/logo.png" alt="logo"></div><div class ="added_div"> ${data.response}</div>`;
+        chatContainer.appendChild(botResponseDiv);
+
+        // Scroll to the bottom of the chat container
         chatContainer.scrollTop = chatContainer.scrollHeight;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        const errorDiv = document.createElement('div');
+        errorDiv.classList.add('container2');
+        errorDiv.innerHTML = `
+        <div class="img1"> <img class="user_img" src="./images/logo.png" alt="logo"></div> <div class="added_div"> Sorry, there was an error processing your request.</div>`;
+        chatContainer.appendChild(errorDiv);
+      });
+    } else {
+      console.log('Message is empty');
     }
+  }
 
-    function sendMessage() {
-        const question = textbox.value.trim();
-        if (question) {
-            addMessage(question, true);
-            textbox.value = '';
-
-            fetch('http://127.0.0.1:5000/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ question }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                addMessage(data.answer, false);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                addMessage('Sorry, there was an error processing your request.', false);
-            });
-        } else {
-            console.log('Message is empty');
-        }
+  // Allow sending message with Enter key
+  textbox.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      sendMessage();
     }
+  });
 
-    sendButton.addEventListener('click', sendMessage);
-
-    textbox.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            sendMessage();
-        }
-    });
-});
+  // Allow sending message with click on send icon
+  sendButton.addEventListener('click', function() {
+    sendMessage();
+  });
+})
