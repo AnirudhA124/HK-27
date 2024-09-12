@@ -81,27 +81,14 @@ const timeFormat = {
   
   // Fetches extension status from GitHub and saves to chrome storage. Defaults to 200, if remote server is unavailable.
   async function checkExtensionStatus() {
-    // Set default value as 200
+    // Set the status directly to indicate that Octavian is running
     chrome.storage.local.set({
       extensionStatusJSON: { status: 200, message: "<strong>Octavian is running</strong> <br /> Do not turn off captions" },
+    }, function () {
+      console.log("Extension status set to running");
     });
-  
-    // https://stackoverflow.com/a/42518434
-    await fetch(
-      "https://ejnana.github.io/transcripto-status/status-prod.json",
-      { cache: "no-store" }
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        // Write status to chrome local storage
-        chrome.storage.local.set({ extensionStatusJSON: result }, function () {
-          console.log("Extension status fetched and saved")
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+}
+
   
   
   function meetingRoutines(uiType) {
@@ -256,16 +243,7 @@ const timeFormat = {
     // Banner CSS
     let html = document.querySelector("html");
     let obj = document.createElement("div");
-    let logo = document.createElement("img");
     let text = document.createElement("p");
-  
-    logo.setAttribute(
-      "src",
-      "https://ejnana.github.io/transcripto-status/icon.png"
-    );
-    logo.setAttribute("height", "32px");
-    logo.setAttribute("width", "32px");
-    logo.style.cssText = "border-radius: 4px";
   
     // Remove banner after 5s
     setTimeout(() => {
@@ -282,10 +260,10 @@ const timeFormat = {
     }
   
     obj.prepend(text);
-    obj.prepend(logo);
     if (html)
       html.append(obj);
-  }
+}
+
   
   // CSS for notification
   const commonCSS = `background: rgb(255 255 255 / 10%); 
