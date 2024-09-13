@@ -36,16 +36,39 @@ onAuthStateChanged(auth, (user) => {
     updateAuthButton(user);
 });
 
-const scrollDiv = document.getElementById('pdf');
+
+const featureDivs = [
+    document.getElementById('pdf'),
+    document.getElementById('url'),
+    document.getElementById('mom'),
+    document.getElementById('video'),
+    document.getElementById('snip')
+];
 const image = document.getElementById('img');
 
-scrollDiv.addEventListener('scroll', function() {
-    if (scrollDiv.scrollTop > 100) {
-        image.src = 'landing_page/pdf-file.png';
-    } else {
-        image.src = 'back';
+// Add hover event listeners for each feature div
+featureDivs.forEach((div) => {
+    if (div) { // Check if the div exists
+        div.addEventListener('mouseover', () => {
+            const newImageSrc = div.dataset.image; // Get the image source from data-image attribute
+            if (image.src !== newImageSrc) {
+                image.style.opacity = '0'; // Fade out the current image
+                setTimeout(() => {
+                    image.src = newImageSrc; // Change the image source
+                    image.style.opacity = '1'; // Fade in the new image
+                }, 300);
+            }
+        });
+
+        // Optional: If you want to hide the image when the mouse leaves the div
+        div.addEventListener('mouseleave', () => {
+            image.style.opacity = '0'; // Fade out the image when mouse leaves
+        });
     }
 });
+
+
+
 
 window.addEventListener('scroll', function() {
     const sections = ['pricing', 'aboutus', 'features', 'landing'];
