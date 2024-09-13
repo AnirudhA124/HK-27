@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*"],
+  content: ["./**/*.{html,js}"],
+
   theme: {
     extend: {
       backgroundImage: {
@@ -9,5 +10,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [  require('tailwindcss'),
+  require('autoprefixer')],
 };

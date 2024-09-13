@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="logic.js" defer></script>
+    <link type="stylesheet" href="style.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js"></script>
+    <script src="logic.js" defer type="module"></script>
     <title>Octavian</title>
     <style>
       html {
@@ -21,11 +23,12 @@
             <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="features-link"><a href="#features">Features</a></li>
             <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200" id="pricing-link"><a href="#pricing">Pricing</a></li>
             <li class="cursor-pointer active:text-blue-800 hover:text-blue-800 transition-all duration-200"><a>Chat with Octavian</a></li>
+           
         </ul>
     </div>
     <div class="flex items-center justify-end h-32">
         <button class="bg-blue-900 mt-6 w-52 h-10 ml-12 font-semibold text-white rounded-2xl transition-all">
-            <span class="text-lg text-white pl-2"><i class="fab fa-chrome"></i></span> Add to Chrome
+            <span class="text-lg text-white pl-2"><a id="authButton">
         </button>
     </div>
 </header>
