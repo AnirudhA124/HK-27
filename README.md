@@ -49,12 +49,6 @@ Octavian is a comprehensive tool that addresses these challenges by providing:
   - **Subscription-Based**: Monthly or annual subscriptions.
   - **Freemium Model**: Basic features are free, with premium upgrades available.
 
-## 📊 Current Status
-
-- **Frontend**: Completed
-- **Backend**: Partially completed
-- **Next Steps**: Integration of frontend and backend components
-
 ## 🧑‍💼 Team
 
 - **Anirudh Agrawal**
