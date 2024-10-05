@@ -1,4 +1,4 @@
-# HK-27: Octavian
+# Octavian
 
 [![GitHub](https://img.shields.io/badge/GitHub-Octavian-blue?logo=github)](https://github.com/AnirudhA124/HK-27)
 
@@ -59,13 +59,13 @@ Octavian is a comprehensive tool that addresses these challenges by providing:
 
 - **Anirudh Agrawal**
 - **Chaitanya Paldhe**
-- **Harsh Rana**
+- **Lokesh Varma**
 
 **Institution**: Manipal Institute of Technology
 
 ## 🔗 Links
 
-- [GitHub - Octavian.AI](https://github.com/AnirudhA124/Octavian.AI)
+- [GitHub - Octavian.AI](https://github.com/AnirudhA124/HK-27)
 
 ## 📜 License
 
